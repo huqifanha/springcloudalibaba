@@ -1,0 +1,40 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      discovery:
+        # 单机
+#        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.1.35:8847
+        username: nacos
+        password: nacos
+        namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+        # 默认true临时实例，超过心跳就会被删除，false永久实例即使服务宕机也不会在注册中心被删除
+#        ephemeral: false
+        #weight: 权重，和负载均衡策略搭配使用，权重越高分配流量越大
+
+# springboot 默认的日志是info级别，feign的debug日志级别小不会输出，要在这里配置
+logging:
+  level:
+    com.example.order.feign : debug
+feign:
+  client:
+    config:
+      product-service:
+        #openfeign 日志局部配置
+        loggerLevel: BASIC
+        # 设置默认契约(还原成原生注解)，调用服务的时候不能使用spring的注解，例如 @RequestMapping
+        # contract: feign.Contract.Default
+        # 连接超时时间，默认2s
+        connectTimeout: 5000
+        # 请求处理超时时间，默认5s
+        readTimeout: 10000
+        # 自定义拦截器
+        requestInterceptors[0]:
+          com.example.order.interceptor.CustomFeignInterceptor
+
+
+

@@ -1,0 +1,10 @@
+server:
+  port: 8050
+spring:
+  profiles:
+    active: dev
+
+#  ${spring.application.name}.${file-extension:properties} 为前缀的基础配置，
+#  还加载了dataId为 ${spring.application.name}-${profile}.${file-extension:properties} 的基础配置。
+#  在日常开发中如果遇到多套环境下的不同配置，可以通过Spring 提供的 ${spring.profiles.active} 这个配置项来配置。
+

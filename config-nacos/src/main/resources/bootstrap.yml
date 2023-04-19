@@ -1,0 +1,35 @@
+spring:
+  application:
+    # 会自动根据服务名来拉去dataid对应的配置文件，入股哦dataid不一致需要手动指定dataid
+    # 默认会读取跟服务名相同的配置文件，其他文件必须写上后缀
+    name: nacos-config
+  cloud:
+    nacos:
+      # 只针对默认的默认的配置
+      config:
+        server-addr: 192.168.1.35:8847
+        username: nacos
+        password: nacos
+        # 命名空间一般使用环境名
+        namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+        # 分组一般使用项目名
+        group: config
+        # 默认读取properties格式，一旦修改了格式，这里需要配置
+        file-extension: yml
+        # 关闭动态刷新
+        #refresh-enabled: false
+        # 自定义configs, 数组下标越大优先级越高
+        shared-configs:
+          - data-id: custom-nacos-config
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: custom-nacos-config2
+            group: DEFAULT_GROUP
+            refresh: true
+        extension-configs:
+          - data-id: custom-nacos-config3
+            group: DEFAULT_GROUP
+            refresh: true
+
+# profile配置文件优先级（大的覆盖小的，并且形成互补）
+# profile > 默认配置文件 > extension-configs(数组下标越大优先级越高) > shared-configs(数组下标越大优先级越高)

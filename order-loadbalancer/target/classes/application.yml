@@ -1,0 +1,15 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      discovery:
+        #server-addr: 127.0.0.1:8848  # 单机
+        server-addr: 192.168.1.35:8847
+        username: nacos
+        password: nacos
+        namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+#        ephemeral: false   # 默认true临时实例，超过心跳就会被删除，false永久实例即使服务宕机也不会在注册中心被删除
+        #weight: 权重，和负载均衡策略搭配使用，权重越高分配流量越大
