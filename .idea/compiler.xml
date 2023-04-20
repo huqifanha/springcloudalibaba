@@ -2,10 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sentinel" />
         <module name="order-loadbalacer" />
         <module name="order-nacos" />
         <module name="stock-nacos" />
@@ -25,6 +27,7 @@
       <module name="order-nacos-ribbon" target="8" />
       <module name="order-openfeign" target="8" />
       <module name="product-nacos" target="8" />
+      <module name="sentinel" target="8" />
       <module name="springcloudalibaba" target="1.5" />
       <module name="stock" target="8" />
       <module name="stock-nacos" target="8" />
@@ -33,6 +36,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="order" options="" />
+      <module name="sentinel" options="-parameters" />
       <module name="springcloudalibaba" options="-parameters" />
       <module name="stock" options="" />
     </option>
