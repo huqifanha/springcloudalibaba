@@ -1,6 +1,5 @@
 package com.example.sentinel.pojo;
 
-import com.alibaba.csp.sentinel.slots.block.BlockException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
