@@ -82,7 +82,7 @@ public class SentinelController {
      * 注意：
      * 1.一定要public
      * 2.返回值与原方法保持一致, 参数一定要包含原方法参数，顺序一致
-     * 3.可以在参数最后添加BlockException，可以区分是什么规则的的异常处理方法
+     * 3.在参数最后添加BlockException，可以区分是什么规则的的异常处理方法
      */
     public User fallbackHandlerForUser(String id, Throwable e) {
         System.out.println("发生异常：" + e.getMessage());
@@ -94,7 +94,7 @@ public class SentinelController {
      * 注意：
      * 1.一定要public
      * 2.返回值与原方法保持一致, 参数一定要包含原方法参数，顺序一致
-     * 3.可以在参数最后添加BlockException，可以区分是什么规则的的异常处理方法
+     * 3.在参数最后添加BlockException，可以区分是什么规则的的异常处理方法
      */
     public User blockHandlerForUser(String id, BlockException e) {
         return new User("用户被流控！！！");

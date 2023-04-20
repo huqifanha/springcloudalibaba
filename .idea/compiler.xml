@@ -7,6 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="order-sentinel" />
+        <module name="sentinel-stock" />
+        <module name="sentinel-openfeign" />
         <module name="order-loadbalacer" />
         <module name="sentinel-demo" />
         <module name="order-nacos" />
@@ -26,9 +29,13 @@
       <module name="order-nacos-loadbalancer" target="8" />
       <module name="order-nacos-ribbon" target="8" />
       <module name="order-openfeign" target="8" />
+      <module name="order-sentinel" target="8" />
       <module name="product-nacos" target="8" />
       <module name="sentinel" target="8" />
       <module name="sentinel-demo" target="8" />
+      <module name="sentinel-openfeign" target="8" />
+      <module name="sentinel-stock" target="8" />
+      <module name="sentinel-test" target="8" />
       <module name="springcloudalibaba" target="1.5" />
       <module name="stock" target="8" />
       <module name="stock-nacos" target="8" />
@@ -39,6 +46,7 @@
       <module name="order" options="" />
       <module name="sentinel" options="-parameters" />
       <module name="sentinel-demo" options="-parameters" />
+      <module name="sentinel-test" options="-parameters" />
       <module name="springcloudalibaba" options="-parameters" />
       <module name="stock" options="" />
     </option>

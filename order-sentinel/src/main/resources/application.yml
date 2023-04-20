@@ -1,0 +1,10 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: order-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8888
+      web-context-unify: false # 默认将调用链路收敛了，默认会导致链路流控不生效

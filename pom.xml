@@ -11,6 +11,9 @@
         <module>order-openfeign</module>
         <module>product-nacos</module>
         <module>config-nacos</module>
+        <module>order-sentinel</module>
+        <module>sentinel-openfeign</module>
+        <module>sentinel-stock</module>
     </modules>
 
     <groupId>com.example.springcloudalibaba</groupId>

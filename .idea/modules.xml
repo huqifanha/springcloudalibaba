@@ -7,8 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/order-loadbalancer/order-loadbalacer.iml" filepath="$PROJECT_DIR$/order-loadbalancer/order-loadbalacer.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-nacos/order-nacos.iml" filepath="$PROJECT_DIR$/order-nacos/order-nacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-openfeign/order-openfeign.iml" filepath="$PROJECT_DIR$/order-openfeign/order-openfeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-sentinel/order-sentinel.iml" filepath="$PROJECT_DIR$/order-sentinel/order-sentinel.iml" />
       <module fileurl="file://$PROJECT_DIR$/product-nacos/product-nacos.iml" filepath="$PROJECT_DIR$/product-nacos/product-nacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/sentinel-demo/sentinel-demo.iml" filepath="$PROJECT_DIR$/sentinel-demo/sentinel-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sentinel-openfeign/sentinel-openfeign.iml" filepath="$PROJECT_DIR$/sentinel-openfeign/sentinel-openfeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sentinel-stock/sentinel-stock.iml" filepath="$PROJECT_DIR$/sentinel-stock/sentinel-stock.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloudalibaba.iml" filepath="$PROJECT_DIR$/springcloudalibaba.iml" />
       <module fileurl="file://$PROJECT_DIR$/stock/stock.iml" filepath="$PROJECT_DIR$/stock/stock.iml" />
       <module fileurl="file://$PROJECT_DIR$/stock-nacos/stock-nacos.iml" filepath="$PROJECT_DIR$/stock-nacos/stock-nacos.iml" />
