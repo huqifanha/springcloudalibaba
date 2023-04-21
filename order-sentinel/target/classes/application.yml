@@ -8,3 +8,12 @@ spring:
       transport:
         dashboard: 127.0.0.1:8888
       web-context-unify: false # 默认将调用链路收敛了，默认会导致链路流控不生效
+      datasource:
+        nacos:
+          flow-rule: # 这个名字可以随意填写，自定义
+            server-addr: 192.168.1.198:8848
+            username: nacos
+            password: nacos
+            namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+            dataId: sentinel-flow-fule
+            rule-type: flow
