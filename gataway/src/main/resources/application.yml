@@ -1,0 +1,54 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: api-gataway
+  cloud:
+    gateway:
+      # 路由规则
+      routes:
+        - id: order_route # 路由的唯一标识
+          uri: lb://order-service # 需要转发的地址   lb 使用nacos中的负债均衡策略 order-service服务
+          # 断言规则 用于路由匹配
+          predicates:
+            - Path=/order_serv/**
+            # http://localhost:8088/order_serv/order/add
+            # http://localhost:8020/order_serv/order/add
+#            - After=2025-04-21T16:42:09.637+08:00[Asia/Shanghai]  # 时间规则  ZonedDateTime.now()
+#            - Header=X-RequestId,\d* # 请求头
+#            - Method=GET # 方法
+#            - Query=name, hqf|hdg # 参数
+#            - CheckAuth=hqf
+          filters:
+            - StripPrefix=1 # 转发之前去掉第一层路径
+            # http://localhost:8020/order/add
+#            - CheckAuth=hqf
+#            - AddRequestHeader=X-Request-color, red # 添加请求头
+#            - RedirectTo=302, https://www.baidu.com # 重定向
+
+      # 跨域配置
+      globalcors:
+        cors-configurations:
+          ‘[/**]’:
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+
+    # 配置nacos
+    nacos:
+      discovery:
+        server-addr: 192.168.1.35:8847
+        username: nacos
+        password: nacos
+        namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+        group: DEFAULT_GROUP
+
+    # 配置sentinel
+    sentinel:
+      transport:
+        dashboard: 192.168.1.198:8888
+      scg:
+        fallback:
+          mode: response
+          response-body: "{code:'400',msg:'被流控！'}"
