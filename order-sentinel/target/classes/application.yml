@@ -15,5 +15,6 @@ spring:
             username: nacos
             password: nacos
             namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
-            dataId: sentinel-flow-fule
+            data-id: sentinel-flow-fule
+            data-type: json
             rule-type: flow
