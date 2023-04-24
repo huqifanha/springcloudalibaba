@@ -9,8 +9,8 @@ spring:
         dashboard: 192.168.1.198:8888
       web-context-unify: false # 默认将调用链路收敛了，会导致链路流控不生效
       datasource:
-        nacos:         # 动态流控规则从nacos加载，在nacos配置中心先配置好
-          flow-rule:   # 这个名字可以随意填写，自定义
+        flow-rule:   # 这个名字可以随意填写，自定义
+          nacos:         # 动态流控规则从nacos加载，在nacos配置中心先配置好
             server-addr: 192.168.1.35:8847
             username: nacos
             password: nacos
