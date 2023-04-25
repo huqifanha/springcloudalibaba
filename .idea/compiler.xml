@@ -15,7 +15,9 @@
         <module name="sentinel-openfeign" />
         <module name="order-loadbalacer" />
         <module name="sentinel-demo" />
+        <module name="seata-stock" />
         <module name="stock-nacos" />
+        <module name="seata-order" />
         <module name="order-openfeign" />
         <module name="config-nacos" />
         <module name="stock" />
@@ -34,6 +36,8 @@
       <module name="order-openfeign" target="8" />
       <module name="order-sentinel" target="8" />
       <module name="product-nacos" target="8" />
+      <module name="seata-order" target="8" />
+      <module name="seata-stock" target="8" />
       <module name="sentinel" target="8" />
       <module name="sentinel-demo" target="8" />
       <module name="sentinel-openfeign" target="8" />

@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/order-openfeign/order-openfeign.iml" filepath="$PROJECT_DIR$/order-openfeign/order-openfeign.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-sentinel/order-sentinel.iml" filepath="$PROJECT_DIR$/order-sentinel/order-sentinel.iml" />
       <module fileurl="file://$PROJECT_DIR$/product-nacos/product-nacos.iml" filepath="$PROJECT_DIR$/product-nacos/product-nacos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seata-order/seata-order.iml" filepath="$PROJECT_DIR$/seata-order/seata-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seata-stock/seata-stock.iml" filepath="$PROJECT_DIR$/seata-stock/seata-stock.iml" />
       <module fileurl="file://$PROJECT_DIR$/sentinel-demo/sentinel-demo.iml" filepath="$PROJECT_DIR$/sentinel-demo/sentinel-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/sentinel-openfeign/sentinel-openfeign.iml" filepath="$PROJECT_DIR$/sentinel-openfeign/sentinel-openfeign.iml" />
       <module fileurl="file://$PROJECT_DIR$/sentinel-stock/sentinel-stock.iml" filepath="$PROJECT_DIR$/sentinel-stock/sentinel-stock.iml" />

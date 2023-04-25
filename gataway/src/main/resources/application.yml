@@ -8,7 +8,7 @@ spring:
       # 路由规则
       routes:
         - id: order_route # 路由的唯一标识
-          uri: lb://order-service # 需要转发的地址   lb 使用nacos中的负债均衡策略 order-service服务
+          uri: lb://seata-order-service # 需要转发的地址   lb 使用nacos中的负债均衡策略 order-service服务
           # 断言规则 用于路由匹配
           predicates:
             - Path=/order_serv/**

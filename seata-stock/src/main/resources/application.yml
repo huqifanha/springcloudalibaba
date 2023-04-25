@@ -1,0 +1,44 @@
+server:
+  port: 9051
+spring:
+  application:
+    name: seata-stock-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_stock?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: cs123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.35:8847
+        username: nacos
+        password: nacos
+        namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 192.168.1.35:8847
+      application: seata-server
+      username: nacos
+      password: nacos
+      namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+      group: SEATA_GROUP
+  config:
+    type: nacos
+    nacos:
+      server-addr: 192.168.1.35:8847
+      username: nacos
+      password: nacos
+      namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+      group: SEATA_GROUP
+      data-id: seataServer.properties
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.example.seata.pojo
+  global-config:
+    db-config:
+      id-type: auto

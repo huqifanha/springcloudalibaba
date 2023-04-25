@@ -1,6 +1,6 @@
 spring:
   application:
-    # 会自动根据服务名来拉去dataid对应的配置文件，入股哦dataid不一致需要手动指定dataid
+    # 会自动根据服务名来拉去dataid对应的配置文件，如果dataid不一致需要手动指定dataid
     # 默认会读取跟服务名相同的配置文件，其他文件必须写上后缀
     name: nacos-config
   cloud:
