@@ -17,6 +17,9 @@
         <module>gataway</module>
         <module>seata-order</module>
         <module>seata-stock</module>
+        <module>mq-producer</module>
+        <module>mq-consumer-a</module>
+        <module>mq-consumer-b</module>
     </modules>
 
     <groupId>com.example.springcloudalibaba</groupId>

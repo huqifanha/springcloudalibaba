@@ -7,11 +7,11 @@ spring:
     nacos:
       # 只针对默认的配置
       config:
-        server-addr: 192.168.1.35:8847
+        server-addr: localhost:8848
         username: nacos
         password: nacos
         # 命名空间一般使用环境名
-        namespace: 4ff20e2f-e020-4cd4-858e-2076ef2400cb
+        namespace: alibaba-springcloud-config
         # 分组一般使用项目名
         group: config
         # 默认读取properties格式，一旦修改了格式，这里需要配置
